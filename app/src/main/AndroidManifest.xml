@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SurfEdMemes">
         <activity
-            android:name=".LoginActivity"
+            android:name=".login.LoginActivity"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity
             android:name=".SplashActivity"

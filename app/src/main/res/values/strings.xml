@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SurfEdMemes</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="enter">войти</string>
+    <string name="empty_field_error">Поле не может быть пустым</string>
+    <string name="password_helper">Длина пароля должна быть больше 6 символов</string>
 </resources>
