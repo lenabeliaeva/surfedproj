@@ -1,14 +1,30 @@
-package com.example.surfedmemes
+package com.example.surfedmemes.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputType
+import android.widget.Button
+import android.widget.ProgressBar
+import com.example.surfedmemes.R
+import studio.carbonylgroup.textfieldboxes.ExtendedEditText
+import studio.carbonylgroup.textfieldboxes.TextFieldBoxes
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), LoginView {
+
+    private lateinit var etLogin: ExtendedEditText
+    private lateinit var tfbLogin: TextFieldBoxes
+    private lateinit var etPassword: ExtendedEditText
+    private lateinit var tfbPassword: TextFieldBoxes
+    private lateinit var btnLogin: Button
+    private lateinit var pbLogin: ProgressBar
+
+    private lateinit var loginPresenter: LoginPresenter
+
+    private var isHidden = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-<<<<<<< HEAD
-=======
         initViews()
         loginPresenter = LoginPresenter(this, LoginInteractor())
         btnLogin.setOnClickListener { login() }
@@ -78,6 +94,5 @@ class LoginActivity : AppCompatActivity() {
     }
 
     override fun onLoginError() {
->>>>>>> 2-login-screen
     }
 }
