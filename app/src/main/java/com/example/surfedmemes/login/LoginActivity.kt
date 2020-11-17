@@ -94,6 +94,5 @@ class LoginActivity : AppCompatActivity(), LoginView {
     }
 
     override fun onLoginError() {
-        TODO("Not yet implemented")
     }
 }
