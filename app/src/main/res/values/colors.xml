@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#23213F</color>
+    <color name="backgroundBrighter">#2E2C49</color>
+    <color name="active">#1EF0D7</color>
+    <color name="inactive">@android:color/white</color>
+    <color name="error">#FF575D</color>
+    <color name="backgroundDark">#12102B</color>
 </resources>
