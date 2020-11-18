@@ -1,19 +1,18 @@
 package com.example.surfedmemes.retrofit
 
+import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class NetworkService {
-    private var retrofit: Retrofit? = null
-    private val BASE_URL = "virtserver.swaggerhub.com/AndroidSchool/SurfAndroidSchool/1.0.0"
+object NetworkService {
+    private const val BASE_URL = "https://r2.mocker.surfstudio.ru/android_vsu/"
 
-    fun genInstance(): Retrofit {
-        if (retrofit == null) {
-            retrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-        }
-        return retrofit!!
-    }
+    private val gson = GsonBuilder().create()
+
+    private val retrofit: Retrofit = Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create(gson))
+        .build()
+
+    fun getLoginServiceApi(): LoginService? = retrofit.create(LoginService::class.java)
 }
