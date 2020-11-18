@@ -1,11 +1,15 @@
 package com.example.surfedmemes.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.ProgressBar
+import androidx.core.content.ContextCompat
+import com.example.surfedmemes.MainActivity
 import com.example.surfedmemes.R
+import com.google.android.material.snackbar.Snackbar
 import studio.carbonylgroup.textfieldboxes.ExtendedEditText
 import studio.carbonylgroup.textfieldboxes.TextFieldBoxes
 
@@ -26,7 +30,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         initViews()
-        loginPresenter = LoginPresenter(this, LoginInteractor())
+        loginPresenter = LoginPresenter(this, LoginInteractor(applicationContext))
         btnLogin.setOnClickListener { login() }
         tfbPassword.endIconImageButton.setOnClickListener { showHidePassword() }
     }
@@ -91,8 +95,13 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
     override fun onLoginSuccess() {
         showProgressBar()
+        startActivity(Intent(this, MainActivity::class.java))
     }
 
     override fun onLoginError() {
+        hideProgressBar()
+        val snackBar = Snackbar.make(findViewById(android.R.id.content), R.string.login_error_snackBar, Snackbar.LENGTH_LONG)
+        snackBar.view.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.error))
+        snackBar.show()
     }
 }
