@@ -79,12 +79,14 @@
             android:id="@+id/pb_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/btn_login"
             android:layout_alignTop="@+id/btn_login"
-            android:layout_centerVertical="true"
+            android:layout_alignBottom="@+id/btn_login"
             android:layout_centerHorizontal="true"
-            android:elevation="2dp"
-            android:visibility="gone"/>
+            android:layout_centerVertical="true"
+            android:theme="@style/ProgressBar"
+            android:elevation="3dp"
+            android:indeterminate="false"
+            android:visibility="gone" />
 
     </RelativeLayout>
 

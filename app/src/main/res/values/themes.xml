@@ -17,4 +17,8 @@
     <style name="Launcher">
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
+
+    <style name="ProgressBar">
+        <item name="colorAccent">@color/background</item>
+    </style>
 </resources>
