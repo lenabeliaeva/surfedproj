@@ -1,7 +1,5 @@
 package com.example.surfedmemes.login
 
-import android.content.Context
-
 class LoginPresenter(loginView: LoginView, loginInteractor: LoginInteractor): LoginInteractor.onLoginFinishedListener {
 
     val lv = loginView
