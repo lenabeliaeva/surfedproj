@@ -70,7 +70,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
             etPassword.inputType = InputType.TYPE_CLASS_TEXT
         } else {
             tfbPassword.setEndIcon(R.drawable.ic_password_eye)
-            etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            etPassword.inputType =
+                InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         }
         isHidden = !isHidden
     }
@@ -100,7 +101,11 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
     override fun onLoginError() {
         hideProgressBar()
-        val snackBar = Snackbar.make(findViewById(android.R.id.content), R.string.login_error_snackBar, Snackbar.LENGTH_LONG)
+        val snackBar = Snackbar.make(
+            findViewById(android.R.id.content),
+            R.string.login_error_snackBar,
+            Snackbar.LENGTH_LONG
+        )
         snackBar.view.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.error))
         snackBar.show()
     }
