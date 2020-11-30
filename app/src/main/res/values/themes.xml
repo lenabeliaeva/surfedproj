@@ -22,4 +22,10 @@
     <style name="ProgressBar">
         <item name="colorAccent">@color/background</item>
     </style>
+    
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/backgroundBrighter</item>
+    </style>
 </resources>
