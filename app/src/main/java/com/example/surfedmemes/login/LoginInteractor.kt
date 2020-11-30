@@ -43,11 +43,12 @@ class LoginInteractor(context: Context) {
                         ) {
                             val loginResponse: LoginResponse? = response.body()
                             prefsHelper.accessToken = loginResponse?.accessToken!!
-                            prefsHelper.userInfo = loginResponse.userInfo!!
+                            //prefsHelper.userInfo = loginResponse.userInfo!!
                             listener.onLoginSuccess()
                         }
 
                         override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                            t.printStackTrace()
                             listener.onLoginError()
                         }
                     })
