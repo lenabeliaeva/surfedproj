@@ -19,11 +19,11 @@ class SharedPrefsHelper(context: Context) {
         PREFS_NAME, Context.MODE_PRIVATE
     )
 
-    var accessToken: String
+    var accessToken: String?
         get() = sharedPrefs.getString(TOKEN, "") ?: ""
         set(value) = sharedPrefs.edit { putString(TOKEN, value) }
 
-    var userInfo: User
+    var userInfo: User?
         get() {
             val jsonString = sharedPrefs.getString(USER_INFO, "")
             return gson.fromJson(jsonString, object : TypeToken<User>(){}.type)

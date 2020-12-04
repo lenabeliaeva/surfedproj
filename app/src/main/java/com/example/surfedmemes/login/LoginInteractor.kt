@@ -42,8 +42,8 @@ class LoginInteractor(context: Context) {
                             response: Response<LoginResponse>
                         ) {
                             val loginResponse: LoginResponse? = response.body()
-                            prefsHelper.accessToken = loginResponse?.accessToken!!
-                            //prefsHelper.userInfo = loginResponse.userInfo!!
+                            prefsHelper.accessToken = loginResponse?.accessToken
+                            prefsHelper.userInfo = loginResponse?.userInfo!!
                             listener.onLoginSuccess()
                         }
 
