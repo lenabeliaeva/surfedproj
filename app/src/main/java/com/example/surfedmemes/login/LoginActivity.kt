@@ -7,7 +7,7 @@ import android.text.InputType
 import android.widget.Button
 import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
-import com.example.surfedmemes.MainActivity
+import com.example.surfedmemes.main.MainActivity
 import com.example.surfedmemes.R
 import com.google.android.material.snackbar.Snackbar
 import studio.carbonylgroup.textfieldboxes.ExtendedEditText
