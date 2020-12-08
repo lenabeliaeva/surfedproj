@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_show_memes"
+        android:icon="@drawable/ic_memes"
+        android:title="@string/memes" />
+
+    <item
+        android:id="@+id/action_add_mem"
+        android:icon="@drawable/ic_add_mem"
+        android:title="@string/add_mem" />
+
+    <item
+        android:id="@+id/action_open_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile" />
+</menu>
